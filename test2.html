@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<style type="text/css">
+		body {
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<div id="result">
+</div>
+<script type="text/javascript">
+	function wH(val){
+		let div = document.getElementById('result');
+		 div.innerHTML =  div.innerHTML.toString() +'<br />' + val;
+	}
+	function pt(val){
+		console.log(val);
+		wH(val);
+	}
+</script>
+
+<script type="text/javascript">
+	function countOccurences(strValue) {
+		let letters = [];
+		strValue.split('').forEach(x => {
+			letters[x] = letters[x] > 0 ? letters[x] + 1 : 1;
+		});
+		return letters;
+	}
+	pt(countOccurences("Hello World") );
+	pt(countOccurences("Purple People Eater"));
+</script>
+</body>
+</html>
