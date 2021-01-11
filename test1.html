@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<style type="text/css">
+		body {
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<div id="result">
+</div>
+<script type="text/javascript">
+	function wH(val){
+		let div = document.getElementById('result');
+		 div.innerHTML =  div.innerHTML.toString() +'<br />' + val;
+	}
+	function pt(val){
+		console.log(val);
+		wH(val);
+	}
+</script>
+
+<script type="text/javascript">
+	function findSum(arr, sumValue) {
+		for (let j = 0; j < arr.length; j++) {
+			for (let i = (j + 1); i < arr.length; i++) {
+				if(sumValue == arr[i] + arr[j]) return [i, j];
+			}
+		}
+		return null;
+	}
+	pt(findSum([1, 20, 13, 16], 29));
+	pt(findSum([3, 15, 18, 8, -1], 17));
+	pt(findSum([1], 5));
+	pt(findSum([1, 5], 3));
+</script>
+</body>
+</html>
